@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poiret+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+header {
+  background: url("./images/bebidas/header-image.png") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  color: #edebe7;
+  height: 50vh;
+  width: 100vw;
+}
+
+header::before {
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 120px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.header-content h1 {
+  font-size: 3.5em;
+  border-top: 2px solid #edebe7;
+}
+
+#produtos {
+  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-top: 4px;
+  background-color: #edebe7;
+}
+
+.lista-pratos,
+.lista-bebidas {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  column-gap: 1%;
+  row-gap: 4px;
+}
+
+.lista-pratos img,
+.lista-bebidas img {
+  width: 100%;
+  height: 100%;
+}
+
+.description {
+  color: rgb(92, 89, 89);
+  padding: 60px 50px;
+  line-height: 1.5em;
+  font-family: "Poiret One", cursive;
+}
+
+.description p {
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.description h2 {
+  padding-bottom: 30px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
