@@ -12,6 +12,8 @@ body {
   overflow-x: hidden;
 }
 
+/* HEADER */
+
 header {
   background: url("./images/bebidas/header-image.png") center/cover no-repeat;
   position: relative;
@@ -32,9 +34,12 @@ header::before {
 .header-content {
   margin: 0 auto;
   text-align: center;
-  padding-top: 120px;
   position: relative;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .header-content h1 {
@@ -42,12 +47,12 @@ header::before {
   border-top: 2px solid #edebe7;
 }
 
-#produtos {
-  display: flex;
+/* SECTION PRODUTOS */
+
+#drinks,
+#pratos {
   display: grid;
-  grid-template-columns: repeat(3, 33%);
-  justify-content: space-between;
-  margin: 0 auto;
+  grid-template-columns: repeat(2, 50%);
   padding-top: 4px;
   background-color: #edebe7;
 }
@@ -55,7 +60,7 @@ header::before {
 .lista-pratos,
 .lista-bebidas {
   display: grid;
-  grid-template-columns: repeat(3, 33%);
+  grid-template-columns: repeat(3, 32.66%);
   column-gap: 1%;
   row-gap: 4px;
 }
@@ -66,16 +71,67 @@ header::before {
   height: 100%;
 }
 
-.description {
-  color: rgb(92, 89, 89);
-  padding: 60px 50px;
-  line-height: 1.5em;
-  font-family: "Poiret One", cursive;
+article {
+  position: relative;
 }
 
-.description p {
-  padding-bottom: 10px;
+article img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all ease 0.8s;
+  color: white;
+  opacity: 0;
   text-align: center;
+  padding: 80px 25px 0 25px;
+  height: 100%;
+  width: 100%;
+  line-height: 1.5em;
+  cursor: pointer;
+}
+
+article:hover .overlay,
+article:hover .overlay {
+  opacity: 1;
+}
+
+.lista-bebidas h4,
+.lista-pratos h4 {
+  padding: 20px 0;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+/* CALL TO ACTION SOBRE */
+
+#cta {
+  display: flex;
+  background-color: #edebe7;
+  height: 70vh;
+}
+
+#cta img {
+  height: 100%;
+  width: 758px;
+}
+
+#cta .description,
+#drinks .description,
+#pratos .description {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(92, 89, 89);
+  line-height: 1.5em;
+  font-family: "Poiret One", cursive;
 }
 
 .description h2 {
@@ -83,4 +139,31 @@ header::before {
   text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.description p {
+  width: 60%;
+  line-height: 2em;
+}
+
+.description button {
+  padding: 10px 70px;
+  border-radius: 2px;
+  border: none;
+  background-color: #ae9782;
+  color: #edebe7;
+  font-weight: 700;
+  margin-top: 24px;
+  font-size: 0.9em;
+  letter-spacing: 0.2em;
+}
+
+.image-gray {
+  filter: grayscale(1);
+}
+
+button:hover {
+  background-color: #edebe7;
+  color: #b3906f;
+  border: #b3906f 1px solid;
 }
