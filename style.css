@@ -1,10 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poiret+One&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright&family=Montserrat&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Cormorant Upright", serif;
 }
 
 body {
@@ -20,12 +19,11 @@ header {
   display: flex;
   color: #edebe7;
   height: 50vh;
-  width: 100vw;
 }
 
 header::before {
   position: absolute;
-  width: 100vw;
+  max-width: 100vw;
   height: 50vh;
   content: "";
   background-color: rgba(0, 0, 0, 0.3);
@@ -71,6 +69,10 @@ header::before {
   height: 100%;
 }
 
+p {
+  font-size: 1.3em;
+}
+
 article {
   position: relative;
 }
@@ -103,9 +105,9 @@ article:hover .overlay {
 
 .lista-bebidas h4,
 .lista-pratos h4 {
-  padding: 20px 0;
+  padding-bottom: 20px;
   font-size: 1.2em;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 /* CALL TO ACTION SOBRE */
@@ -113,7 +115,8 @@ article:hover .overlay {
 #cta {
   display: flex;
   background-color: #edebe7;
-  height: 70vh;
+  height: 80vh;
+  padding-top: 4px;
 }
 
 #cta img {
@@ -130,15 +133,81 @@ article:hover .overlay {
   align-items: center;
   flex-direction: column;
   color: rgb(92, 89, 89);
-  line-height: 1.5em;
-  font-family: "Poiret One", cursive;
+  line-height: 1em;
 }
 
 .description h2 {
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   text-align: center;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  font-size: 2.5em;
+}
+
+.description p {
+  width: 60%;
+  line-height: 1.4em;
+}
+
+.description button {
+  padding: 10px 70px;
+  border-radius: 2px;
+  border: none;
+  background-color: #ba9b7d;
+  color: #edebe7;
+  font-weight: 700;
+  margin-top: 35px;
+  font-size: 0.9em;
+  letter-spacing: 0.2em;
+}
+
+.image-gray {
+  filter: grayscale(1);
+}
+
+button:hover {
+  background-color: #edebe7;
+  color: #b3906f;
+  border: #b3906f 1px solid;
+  cursor: pointer;
+}
+
+/* SECTION LOCAL */
+
+.rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 0;
+  background-color: #ba9b7d;
+  margin-top: 2px;
+}
+
+.rodape p {
+  font-size: 1.1em;
+  padding: 3px;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: column;
+  color: #edebe7;
+  width: 100%;
+}
+
+.social-media a {
+  color: #edebe7;
+}
+
+.social-media h3 {
+  padding-bottom: 8px;
+}
+
+.icon-medias img {
+  width: 45px;
+  padding: 8px;
 }
 
 .description p {
@@ -150,7 +219,7 @@ article:hover .overlay {
   padding: 10px 70px;
   border-radius: 2px;
   border: none;
-  background-color: #ae9782;
+  background-color: #b3906f;
   color: #edebe7;
   font-weight: 700;
   margin-top: 24px;
