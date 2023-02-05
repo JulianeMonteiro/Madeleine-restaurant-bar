@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #fff;
+  background-color: #edebe7;
   overflow-x: hidden;
 }
 
@@ -34,10 +34,6 @@ header::before {
   text-align: center;
   position: relative;
   text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .header-content h1 {
@@ -45,14 +41,24 @@ header::before {
   border-top: 2px solid #edebe7;
 }
 
+.flex {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* SECTION PRODUTOS */
+
+p {
+  font-size: 1.3em;
+}
 
 #drinks,
 #pratos {
   display: grid;
   grid-template-columns: repeat(2, 50%);
   padding-top: 4px;
-  background-color: #edebe7;
 }
 
 .lista-pratos,
@@ -65,12 +71,8 @@ header::before {
 
 .lista-pratos img,
 .lista-bebidas img {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
-}
-
-p {
-  font-size: 1.3em;
 }
 
 article {
@@ -88,10 +90,10 @@ article img {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
   transition: all ease 0.8s;
-  color: white;
+  color: #edebe7;
   opacity: 0;
   text-align: center;
-  padding: 80px 25px 0 25px;
+  padding: 50px 5px 0 5px;
   height: 100%;
   width: 100%;
   line-height: 1.5em;
@@ -106,50 +108,46 @@ article:hover .overlay {
 .lista-bebidas h4,
 .lista-pratos h4 {
   padding-bottom: 20px;
-  font-size: 1.2em;
+  font-size: 1.3em;
   text-transform: capitalize;
 }
 
-/* CALL TO ACTION SOBRE */
-
-#cta {
-  display: flex;
-  background-color: #edebe7;
-  height: 80vh;
-  padding-top: 4px;
-}
-
-#cta img {
-  height: 100%;
-  width: 758px;
-}
-
-#cta .description,
-#drinks .description,
-#pratos .description {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-  color: rgb(92, 89, 89);
-  line-height: 1em;
-}
-
 .description h2 {
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   text-align: center;
   letter-spacing: 0.1em;
   text-transform: capitalize;
   font-size: 2.5em;
 }
-
 .description p {
-  width: 60%;
-  line-height: 1.4em;
+  width: 70%;
+  font-size: 1.4em;
+  line-height: 1.5em;
 }
 
-.description button {
+/* CALL TO ACTION SOBRE */
+
+#cta {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding-top: 4px;
+}
+
+#cta .description,
+#drinks .description,
+#pratos .description {
+  color: rgb(92, 89, 89);
+  text-align: center;
+}
+#cta .description {
+  padding: 90px 0 100px 0;
+}
+
+#cta .description h2 {
+  padding-bottom: 10px;
+}
+
+button {
   padding: 10px 70px;
   border-radius: 2px;
   border: none;
@@ -161,10 +159,6 @@ article:hover .overlay {
   letter-spacing: 0.2em;
 }
 
-.image-gray {
-  filter: grayscale(1);
-}
-
 button:hover {
   background-color: #edebe7;
   color: #b3906f;
@@ -172,7 +166,13 @@ button:hover {
   cursor: pointer;
 }
 
-/* SECTION LOCAL */
+.image-gray img {
+  filter: grayscale(1);
+  height: 100%;
+  width: 45vw;
+}
+
+/* SECTION RODAPÉ */
 
 .rodape {
   display: flex;
@@ -184,7 +184,7 @@ button:hover {
 }
 
 .rodape p {
-  font-size: 1.1em;
+  font-size: 1.2em;
   padding: 3px;
 }
 
@@ -195,6 +195,7 @@ button:hover {
   flex-direction: column;
   color: #edebe7;
   width: 100%;
+  font-size: 0.8em;
 }
 
 .social-media a {
@@ -205,21 +206,17 @@ button:hover {
   padding-bottom: 8px;
 }
 
-.icon-medias img {
-  width: 45px;
+.social-media .icon-medias img {
+  width: 40px;
   padding: 8px;
 }
 
-.description p {
-  width: 60%;
-  line-height: 2em;
-}
-
-.description button {
+button {
   padding: 10px 70px;
   border-radius: 2px;
   border: none;
   background-color: #b3906f;
+  border: #b3906f 1px solid;
   color: #edebe7;
   font-weight: 700;
   margin-top: 24px;
@@ -227,12 +224,310 @@ button:hover {
   letter-spacing: 0.2em;
 }
 
-.image-gray {
-  filter: grayscale(1);
-}
-
 button:hover {
   background-color: #edebe7;
   color: #b3906f;
   border: #b3906f 1px solid;
+}
+
+.max-tablet {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .social-media span {
+    display: none;
+  }
+}
+
+/* TELAS PEQUENAS, DESKTOPS */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  header {
+    height: 30vh;
+  }
+
+  header::before {
+    height: 30vh;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+  .description {
+    padding: 30px;
+  }
+
+  .lista-bebidas h4,
+  .lista-pratos h4 {
+    padding-bottom: 15px;
+    font-size: 1.2em;
+  }
+
+  .description h2 {
+    padding-bottom: 15px;
+    font-size: 2em;
+  }
+  .description p {
+    width: 80%;
+    font-size: 1.3em;
+    line-height: 1.4em;
+  }
+
+  button {
+    padding: 10px 50px;
+  }
+
+  .max-tablet {
+    display: none;
+  }
+}
+
+/* LAPTOPS */
+@media screen and (min-width: 560px) and (max-width: 768px) {
+  header {
+    height: 30vh;
+  }
+
+  header::before {
+    height: 30vh;
+  }
+
+  .header-content h1 {
+    font-size: 3em;
+    border-top: 2px solid #edebe7;
+  }
+
+  .description {
+    padding: 30px 0;
+  }
+
+  .lista-pratos,
+  .lista-bebidas {
+    display: grid;
+    grid-template-columns: repeat(2, 49.5%);
+    column-gap: 1%;
+    row-gap: 4px;
+  }
+
+  .tablet-hide {
+    display: none;
+  }
+
+  .overlay {
+    padding: 30px 5px 0 5px;
+  }
+
+  p {
+    font-size: 1.1em;
+  }
+
+  .lista-bebidas h4,
+  .lista-pratos h4 {
+    font-size: 1.1em;
+    padding-bottom: 10px;
+  }
+
+  .description h2 {
+    padding-bottom: 15px;
+    font-size: 1.5em;
+  }
+
+  .description p {
+    font-size: 1.1em;
+    line-height: 1.3em;
+  }
+
+  #cta .description {
+    padding: 40px 10px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 0.7em;
+  }
+
+  .max-tablet {
+    display: none;
+  }
+}
+/* IPADS E TABLETS */
+@media screen and (min-width: 481px) and (max-width: 559px) {
+  header {
+    height: 25vh;
+  }
+
+  header::before {
+    height: 25vh;
+  }
+
+  .header-content h1 {
+    font-size: 2em;
+    border-top: 2px solid #edebe7;
+  }
+  .header-content p {
+    font-size: 0.9em;
+  }
+
+  p {
+    font-size: 1em;
+    line-height: 1em;
+  }
+
+  .overlay {
+    padding: 10px 5px 0 5px;
+  }
+
+  .lista-pratos,
+  .lista-bebidas {
+    display: grid;
+    grid-template-columns: repeat(2, 49.5%);
+    column-gap: 1%;
+    row-gap: 4px;
+  }
+
+  .lista-bebidas h4,
+  .lista-pratos h4 {
+    font-size: 1em;
+    padding-bottom: 10px;
+  }
+
+  .description {
+    padding: 30px 0;
+  }
+
+  .description h2 {
+    padding-bottom: 10px;
+    font-size: 1.5em;
+  }
+
+  .description p {
+    font-size: 1.1em;
+    line-height: 1.2em;
+  }
+
+  #cta #description-titulo {
+    padding: 0;
+  }
+
+  #cta .description {
+    padding: 7 0px 10px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 0.7em;
+  }
+
+  .image-gray img {
+    width: 50vw;
+  }
+
+  .tablet-hide {
+    display: none;
+  }
+
+  .tablet-hide-min {
+    display: none;
+  }
+
+  .max-tablet {
+    display: block;
+  }
+}
+
+/* DISPOSITIVOS MOVEIS */
+
+@media screen and (max-width: 481px) {
+  header {
+    height: 25vh;
+  }
+
+  header::before {
+    height: 25vh;
+  }
+
+  .header-content h1 {
+    font-size: 2em;
+    border-top: 2px solid #edebe7;
+  }
+  .header-content p {
+    font-size: 0.9em;
+  }
+
+  p {
+    font-size: 1em;
+    line-height: 0.9em;
+  }
+
+  .overlay {
+    padding: 10px 3px 0 3px;
+  }
+
+  .lista-pratos,
+  .lista-bebidas {
+    display: grid;
+    grid-template-columns: repeat(3, 32.66%);
+    column-gap: 1%;
+  }
+
+  .lista-bebidas h4,
+  .lista-pratos h4 {
+    font-size: 1.09em;
+    padding-bottom: 4px;
+  }
+
+  .description h2 {
+    padding-bottom: 20px;
+    font-size: 1.7em;
+  }
+
+  #pratos,
+  #drinks,
+  #cta {
+    display: flex;
+  }
+
+  #drinks {
+    flex-direction: column;
+  }
+
+  #pratos {
+    flex-direction: column-reverse;
+  }
+
+  .description {
+    padding: 60px 0 70px 0;
+  }
+
+  .description p {
+    font-size: 1.1em;
+    line-height: 1.3em;
+    width: 80%;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.7em;
+  }
+
+  .mobile-hide,
+  .tablet-hide,
+  .tablet-hide-min {
+    display: none;
+  }
+
+  .max-tablet {
+    display: block;
+  }
+}
+#cta #description-titulo {
+  padding: 0;
+}
+
+#cta .description {
+  padding: 60px 0px 70px 0;
+}
+
+.rodape {
+  padding: 30px 0;
 }

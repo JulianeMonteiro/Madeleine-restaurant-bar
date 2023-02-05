@@ -9,7 +9,7 @@
   </head>
   <body>
     <header>
-      <div class="header-content">
+      <div class="header-content flex">
         <h1>MADELEINE</h1>
         <p>RESTAURANT & BAR</p>
       </div>
@@ -35,26 +35,26 @@
             </a>
           </div>
         </article>
-        <article>
+        <article class="tablet-hide">
           <img
             src="./images/pratos/salmon.png "
             alt="imagem prato com salmão"
-          /><div class="overlay">
+          /><div class="overlay tablet-hide">
             <h4>Saumon Grillè</h4>           
             <p>Posta de salmão grelhado com risoto de arroz negro </p>  
             </a>
           </div>
         </article>
-        <article>
+        <article class="tablet-hide">
           <img
             src="./images/pratos/pure.png"
             alt="imagem prato com pure e carne"
-          /><div class="overlay">
+          /><div class="overlay ">
             <h4>Confit de canard</h4>           
             <p>Confit de pato ao molho de uvas ao porto e purê de cará</p>
           </div>
         </article>
-        <article>
+        <article class="mobile-hide">
           <img
             src="./images/pratos/carre.png"
             alt="imagem prato com carré"
@@ -71,7 +71,7 @@
         </article>
       </div>
 
-      <div class="description">
+      <div class="description flex">
         <h2>Conheça Nossos Pratos</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur,
@@ -79,7 +79,7 @@
           architecto labore laborum. Reiciendis error totam ea accusamus
           architecto impedit quas maxime unde!
         </p>
-        <p>
+        <p class="tablet-hide-min">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur,
           rem illo. Consequatur consectetur tenetur voluptas, illo corporis
           architecto labore laborum. Reiciendis error totam ea accusamus
@@ -89,7 +89,7 @@
     </section>
 
     <section id="drinks">
-      <div class="description">
+      <div class="description flex">
         <h2>E Drinks</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur,
@@ -97,7 +97,7 @@
           architecto labore laborum. Reiciendis error totam ea accusamus
           architecto impedit quas maxime unde!
         </p>
-        <p>
+        <p class="tablet-hide-min"> 
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur,
           rem illo. Consequatur consectetur tenetur voluptas, illo corporis
           architecto labore laborum. Reiciendis error totam ea accusamus
@@ -122,7 +122,7 @@
             </a>
           </div>
         </article>
-        <article>
+        <article class="mobile-hide">
           <img src="./images/bebidas/drink-4.png" alt="imagem drink" />
           <div class="overlay">
             <h4>Espumante de lavanda</h4>           
@@ -138,7 +138,7 @@
             </a>
           </div>
         </article>
-        <article>
+        <article class="tablet-hide">
           <img src="./images/bebidas/drink-5.jpg" alt="imagem drink" />
           <div class="overlay">
             <h4>Coquetel de cogumelo</h4>           
@@ -146,7 +146,7 @@
             </a>
           </div>
         </article>
-        <article>
+        <article class="tablet-hide">
           <img src="./images/bebidas/drink-6.jpg" alt="imagem drink" />
           <div class="overlay">
             <h4>Gin Tropical</h4>           
@@ -158,18 +158,19 @@
     </section>
 
     <section id="cta">
-      <div class="image-gray">
+      <div class="image-gray mobile-hide">
         <img src="./images/sobre/barman-5.jpg" alt="Foto barman" />
       </div>
 
-      <div class="description">
-        <h2>E vivencie </h2> 
-        <h2>uma Experiência Única</h2>
+      <div class="description flex">
+        <h2 id="description-titulo">E vivencie </h2> 
+        <h2><span>uma Experiência Única</span></h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur,
           rem illo. Consequatur consectetur tenetur voluptas, illo corporis
-          architecto labore laborum. Reiciendis error totam ea accusamus
-          architecto impedit quas maxime unde!
+          architecto labore laborum.
+         <span class="tablet-hide-min">Reiciendis error totam ea accusamus
+          architecto impedit quas maxime unde!</span>  
         </p>
 
         <button type="button">FAÇA A SUA RESERVA</button>
@@ -178,12 +179,12 @@
     <footer>
       <div class="rodape">
 
-        <div class="social-media">  
+        <div class="social-media tablet-hide">  
           <h3>MADELEINE RESTAURANT & BAR</h3>
           <p>Av. Paulista 576 - Boa Vista / SP</p>
-          <p>(11) 4211-8211</p>
-          <p>&copy 2023 - Madeleine Restaurant & Bar - Todos os direitos reservados</p>
-           </div>
+          <p class="tablet-hide-min">(11) 4211-8211</p>
+          <p>&copy 2023 - Madeleine Restaurant & Bar <span> - Todos os direitos reservados</span></p>
+        </div>
 
         <div class="social-media">
           <h3>REDES SOCIAIS</h3>
@@ -194,7 +195,9 @@
             <img src="./images/icones/whatsapp.svg" alt="icone whatsapp">
           </div>
           <p><a href="mailto:contato@madeleinerestaurantebar.com"> contato@madeleinerestaurantebar.com</a></p> 
+          <p class="max-tablet">&copy 2023 - Madeleine Restaurant & Bar <span> - Todos os direitos reservados</span></p>
         </div>
+
       </div>
     </footer>
   </body>
