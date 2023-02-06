@@ -15,8 +15,11 @@ The choice of the theme of the page was made to put into practice my knowledge i
 ## See Restaurant's Landing Page in action
 
 Try with our [live demo](https://madeleine-landingpage.vercel.app/).
- </br>
+</br>
 See below how the page behaves on different screens:
 
  <p align="center">
   <img width="770" src=" ./images/readme/telas.png"> </p>
+
+ <p align="center">
+  <img width="770" src=" ./images/readme/comportamentos.png"> </p>
